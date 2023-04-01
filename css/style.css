@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+*{
+   font-family: 'Poppins', sans-serif;
+   margin: 0%;
+   padding: 0%;
+   box-sizing: border-box;
+   text-decoration: none;
+   outline: none;
+   border: none;
+   text-transform: capitalize;
+}
+:root{
+    --verde: #a457d1;
+    --limon: #5c5028;
+    --degradado:linear-gradient(90deg, var(--limon),var(--verde));
+}
+
+*section{
+    background: var(--limon);
+    color: white;
+}
+html{
+    font-size: 62.4%;
+    overflow: hidden;
+}
+body{
+    background: white;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+header .logo{
+    font-size: 3rem;
+    color: var(--verde);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+header.logo span{
+    color: var(--limon);
+}
+header .navbar a{
+    font-size: 1.8rem;
+    margin-left: 2rem;
+    color: var(--verde);
+}
+header .navbar a:hover{
+    color: var(--limon);
+}
+header input{
+    display: none;
+}
+header label{
+    font-size: 3rem;
+    color: var(--verde);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+
+@media(max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+}
+@media(max-width:768px){
+    header label{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 1rem 2rem;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+    }
+
+    header .navbar a{
+        display: block;
+        margin: 2rem 0;
+        font-size: 2rem;
+    }
+
+    header input:checked ~ .navbar{
+        transform: scaleY(1);
+        opacity: 1;
+    } 
+    header input:checked ~ label::before{
+        content: '\f00d';
+    }
+}
+@media(max-width:450px){
+    html{
+        font-size: 49%;
+    }
+}
+img{
+    height: 420px;
+    width: 400px;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    border-radius: 30px;
+}
+p{
+    text-align: center;
+    font-size: 3rem
+}
+h1{
+    text-align: center;
+    color: #a457d1;
+    font-size: 3rem;
+}
+h2{
+    text-align: center;
+    font-size: 2rem;
+    color:rgb(82, 47, 102);
+}
+h3{
+    text-align: center;
+    font-size: 1.7rem;
+    color: rgb(156, 78, 114);
+}
+h4{
+    text-align: center;
+    font-size: 1.3rem;
+}
+h6{
+    font-size: 1.7rem;
+}
+ div{
+    width: auto;
+    height:950px;
+    background-color: #ffffff;
+    overflow: scroll;
+}
